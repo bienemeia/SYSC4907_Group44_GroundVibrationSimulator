@@ -3,6 +3,7 @@ import sqlite3
 import random
 import time
 import csv
+import I2CLib as i2c
 
 from datetime import datetime
 from time import sleep # delays between measurements
@@ -39,10 +40,10 @@ def main():
 
 
 def get_temp():
-	return round(random.uniform(10.00,50.00),3)
+	return i2c.getTemperature()
 	
 def get_humidity():
-	return round(random.uniform(0.00,100.00),2)
+	return i2c.getHumidity()
 
 def get_frequency():
 	return round(random.uniform(870.00,1084.00),2)
