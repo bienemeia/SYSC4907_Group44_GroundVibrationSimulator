@@ -23,13 +23,13 @@ def main():
 		decision = input("Do you want to start the experiment? (YES/NO): ")
 		if (decision == "YES"):
 			if (count == 1):
-				drop_table()
+				delete_table()
 			batch_number = input("Enter the batch number: ")
 			species = input("Enter the species name: ")
 			collection_date = input("Enter the collection date (dd/mm/yy): ")
 			email = input("Enter a valid email id: ")
 			if (count == 1):
-				drop_table()
+				delete_table()
 				count = 0
 			create_table()
 			count = 1
@@ -51,7 +51,9 @@ def get_frequency():
 def get_displacement():
 	return round(random.uniform(1.00,100.00),2)
 	
-	
+def create_database():
+	conn = sqlite3.connect('OralDemo.db')
+	conn.close()	
 	
 def create_table():
 	conn = sqlite3.connect('OralDemo.db')
@@ -74,10 +76,10 @@ def create_table():
 	conn.commit()
 	conn.close()
 	
-def drop_table():
+def delete_table():
 	conn = sqlite3.connect('OralDemo.db')
 	curs = conn.cursor()
-	curs.execute("DROP TABLE Experiment")
+	curs.execute("DROP TABLE IF EXISTS" + Experiment)
 	conn.commit()
 	conn.close()
 
@@ -102,3 +104,4 @@ def insert_values(batch_number,species,collection_date,email):
 
 if __name__ == "__main__":
 	main()
+
