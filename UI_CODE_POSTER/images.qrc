@@ -1,0 +1,21 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/pause.svg</file>
+    <file>icons/amp.png</file>
+    <file>icons/back.png</file>
+    <file>icons/freq.png</file>
+    <file>icons/name.png</file>
+    <file>icons/mail.png</file>
+    <file>icons/plus-circle.svg</file>
+    <file>icons/pressure.png</file>
+    <file>icons/temp.png</file>
+    <file>icons/play.svg</file>
+    <file>icons/x-octagon.svg</file>
+    <file>icons/settings.svg</file>
+  </qresource>
+  <qresource prefix="images">
+    <file>images/turtle.png</file>
+    <file>images/export data.png</file>
+    <file>images/save changes.png</file>
+  </qresource>
+</RCC>
