@@ -3,11 +3,11 @@
 #  Connects to Arduino via I2C
 
 import sys
-from smbus2 import SMBus
+import smbus
 import time
 
 addr = 0x8 # bus address of Arduino
-bus = SMBus(1) # indicates /dev/ic2-1
+bus = smbus.SMBus(1) # indicates /dev/ic2-1
 numb = 0
 
 def main():
