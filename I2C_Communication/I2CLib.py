@@ -15,7 +15,7 @@ def getTemperature():
     except OSError:
         print("Failed to read I2C")
     
-def getHumidity():
+def getHumidity():i
     try:
         return((bus.read_word_data(addr, 2)))
     except OSError:
